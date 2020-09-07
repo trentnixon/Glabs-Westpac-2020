@@ -1,0 +1,195 @@
+header.Parent{
+   
+    .inner{
+        img{
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 600px) { height: 100vh;}
+}
+
+header.Child{
+    margin-bottom: -6rem;
+    @media only screen and (max-width: 600px) { height: 100vh;}
+    .Gradient{
+       
+        .GlabsContainer{
+            >div{
+            .inner{
+               
+                h1{
+                    margin-bottom: 1rem;
+                }
+                h2{
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+                @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                    justify-content: flex-start;
+                    h1{ font-size: 2.5rem;margin-bottom: 1rem;}
+                    h2{ font-size: 1.3rem; line-height: 1.8rem; }
+                }
+                @media only screen and (min-width: 600px) and (max-width: 768px) {
+                    width: 100%;
+                    justify-content: flex-start;
+                    h1{ font-size: 2.5rem;margin-bottom: 1rem;}
+                    h2{ font-size: 1.3rem; line-height: 1.8rem; }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                    justify-content: center;
+                    //padding-top: 3rem;
+                    h1{ font-size: 2.3rem; line-height: 2.5rem; margin-bottom: 1rem;}
+                    h2{ font-size: 1rem; line-height: 1.4rem; }
+                }
+            }
+    }}}
+}
+
+header{
+    position: relative;
+   
+    //min-height: 40vh;
+
+    .Gradient{
+
+        .PaidforBy{
+           
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 1rem 0rem 0 0;
+            font-family: "TS3 Text Sans";
+            font-size: .9rem;
+            color: #434346;
+            img{
+                width: 150px;
+                margin:  0 1rem;
+            }
+        }
+
+        // z-index: 1000;
+       background: rgb(255,255,255);
+       background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.3) 40%, rgba(35,35,40,1) 98%);
+       background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.3) 40%, rgba(35,35,40,1) 98%);
+       background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 40%, rgba(35,35,40,1) 98%);
+       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#232328",GradientType=1);
+   
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: flex-end;
+       align-content: flex-start;
+
+        .GlabsContainer{
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            align-content: flex-start;
+            position: relative;
+            bottom:0;
+
+            >div{
+                margin: 0 auto;
+                height: 100%;
+                .inner{
+                    width: 70%;
+                    height: 100%;
+                    text-align: center;
+                    margin: 0 auto;
+                    padding: 0;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content:center;
+                    align-content: center;
+                    font-family: "Guardian Headline Full";
+                    h1{
+                        font-size: 3.5rem;
+                    }
+                    h2{
+                        font-size: 3.5rem;
+                        line-height: 3.5rem;
+                        font-weight: 100;
+                    }
+
+                    .HeaderIcon{
+                        width: 60px;
+                        height: 60px;
+                        padding: 0.7rem;
+                        align-items: center;
+                        justify-content:center;
+                        align-content: center;
+                        display: flex;
+                        border-radius: 100%;
+                 
+                        img{ width: 60px;}
+                    }
+                    
+
+                    .HeaderIcon.Tech{    background-color: $TechColor; border-color:$TechColor ;  }
+                    .HeaderIcon.Science{    background-color: $BiologyColor; }
+                    .HeaderIcon.Economics{ background-color: $EconomicColor;   }
+                    .HeaderIcon.Environment{  background-color: $EnviromentColor; }
+                    .HeaderIcon.Culture{  background-color: $CultuerColor;  }
+                    .HeaderIcon.Health{  background-color: $HealthColor; }
+                }
+            }
+        }
+    }
+
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .Gradient .GlabsContainer > div .inner h1{
+            font-size: 3.5rem;
+            line-height:3rem;
+        }
+        .Gradient .GlabsContainer > div .inner h2{
+         font-size: 2.5rem;
+         line-height: 2.5rem;
+        }
+       
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+
+        .Gradient .GlabsContainer > div .inner h1{
+            font-size: 3rem;
+            line-height:3rem;
+        }
+        .Gradient .GlabsContainer > div .inner h2{
+         font-size: 2rem;
+         line-height: 2.2rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        height: 60vh;
+        .Gradient .GlabsContainer > div .inner h1{
+            font-size: 3rem;
+            line-height:3.2rem;
+        }
+        .Gradient .GlabsContainer > div .inner h2{
+         font-size: 2.2rem;
+         line-height: 2.2rem;
+        }
+        .Gradient .GlabsContainer > div .inner{ width: 100%;}
+       
+    }
+ }

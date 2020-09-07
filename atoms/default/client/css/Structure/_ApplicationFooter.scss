@@ -1,0 +1,37 @@
+.ApplicationFooter{
+    background-color: #232328;
+    color: #fff;
+
+    .Tail{
+        border-top: 1px solid #D8D8D8;
+        padding: 2rem 1rem 3rem;
+        
+        p{
+            font-family: "TS3 Text Sans";
+            color: #fff;
+            width: 60%;
+            a{
+                color: white;
+                font-weight: 800;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+       
+        .Tail{ p{ width: 80%; } }
+       
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+       
+        .Tail{ p{ width: 80%; } }
+       
+    }
+
+    @media only screen and (max-width: 600px) {
+      
+        .Tail{ p{ width: 100%; } }
+       
+    }
+}

@@ -1,0 +1,121 @@
+#MainTitle{
+    
+    @include FlexBoxBasic( $direction:column ,$justify:flex-start, $items:flex-start, $content:flex-start );
+    @include BreakPoints;
+
+    .TitleTab{
+      overflow: hidden;
+      width: 50%;
+      
+      .InnerTitleTab{
+          
+      background-color: $Color5;
+      padding: 1.2em;
+
+          h1{
+            font-size: 1rem;
+            margin: 0;
+            line-height: 0;
+          }
+      }
+    }
+
+    .SponserTab{
+      width: 10%;
+      align-self: flex-end;
+      position: absolute;
+  
+      overflow: hidden;
+      height: 100px;
+      
+        .SponserTabInner{
+          opacity: 1;
+          padding-top: .5em;
+
+            .ClientDetails{
+              @include FlexBoxBasic( $direction:column ,$justify:center, $items:center, $content:center);
+              span{
+                font-size: .8rem;
+              }
+              img{
+                width: 80px;
+              }
+            }
+        }
+/*
+        .SponserTabInner.ShowTab{
+          -webkit-animation: slide-in-top  2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-top  2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation-delay: .5s;
+        }
+        .SponserTabInner.HideTab{
+          opacity: 1;
+          -webkit-animation: slide-Out-top   4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-Out-top   4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation-delay: .5s;
+        }
+      */
+      
+    }
+
+#TitleContainer{
+  @include BreakPoints;
+ 
+  display: flex;
+  flex-direction: column;
+
+  .Tab{
+    background-color: white;
+    width: 60%;
+    padding: .3rem 0 .3rem 1rem;
+    color: black;
+    h1{
+      font-size: 20px;
+      font-family:$FontFamilyBody;
+    }
+  }
+
+    .Title-Container{
+        background-color: $TitleColor;
+        @each $name, $size in $Title-Large{  #{$name} :$size; }
+
+        
+       
+
+        h1{ 
+                margin: 0;
+                padding: 0 0 0 1rem; 
+                font-size: 50px;
+                line-height: 52px;
+                color: $Color1;
+                width: 60%;
+                font-family:$FontFamilyBody;
+        }
+       
+    }
+
+
+    @media only screen  and (min-width : 1200px) {}
+    @media only screen  and (min-width : 990px) and (max-width : 1024px) {}
+    @media only screen  and (max-width : 568px) {
+        .Title-Container{
+            @each $name, $size in $Title-Small{  #{$name} :$size; }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      .Tab{
+        width: auto;
+        h1{ font-size: 1rem ;  }
+      }
+      .Title-Container{
+        h1{
+          font-size: 45px;
+          line-height: 50px;
+          width: 96%;
+        }
+      }
+    }
+}
+}

@@ -1,0 +1,94 @@
+.Profile{
+
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 2rem;
+    
+    .Details{width: 60%}
+    .Image{ width: 40%;}
+
+    .player-wrapper {
+        position: relative;
+        padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+        margin: 30px 0;
+    
+        .YTVideoPlayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+      }
+      .SupportingImage{
+        position: relative;
+        padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+        margin: 30px 0;
+        overflow: hidden;
+          img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%
+          }
+      }
+      
+    > div{
+        padding: 0 1.5rem;
+
+        h1{
+            font-weight: 400;
+        }
+         h2{
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
+    .Meta{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        margin: 1rem 0 2rem;
+        padding: .5rem 0;
+
+        h2{
+            font-size: 1.1rem;
+            font-weight: 100;
+            margin: 0;
+            strong{ font-weight: 800; }
+        }
+    }
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+       
+        .Details{width: 70%}
+        .Image{ width: 30%;}
+       
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+       
+        .Details{width: 80%}
+        .Image{ width: 20%; padding: 0;}
+       
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-wrap: wrap;
+        .Details{width: 100%}
+        .Image{ 
+                width: 100%; 
+                margin:  0 0 1rem 0 ;
+                img{
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+       
+    }
+}

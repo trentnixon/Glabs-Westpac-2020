@@ -1,0 +1,105 @@
+
+
+.ScholarCategoryContainer{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -20px;
+
+        .ParentListIcon{
+
+
+                width: 40px;
+                height: 40px;
+                margin: 0 1px;
+                line-height: 1em;
+                border-radius: 100%;
+                background-position: center 15px;
+                background-repeat: no-repeat;
+                background-size: 50px;
+                color: white;
+
+                background-size: 20px;
+                background-position: 50%;
+                background-repeat: no-repeat;
+
+                .ParentListTitle{
+                font-size: .8em;
+                color: white;
+                margin:55px  5px 0;
+                }
+            }
+            .Tech{        @include ParentIcons($Path,"cog.svg", $TechColor) }
+            .Science{      @include ParentIcons($Path,"Heart.svg", $BiologyColor)}
+            .Economics{    @include ParentIcons($Path,"Dollar.svg", $EconomicColor)}
+            .Environment{  @include ParentIcons($Path,"Leaf.svg", $EnviromentColor)}
+            .Culture{      @include ParentIcons($Path,"HandShake.svg", $CultuerColor)}
+            .Health{       @include ParentIcons($Path,"molecule.svg", $HealthColor)}
+}
+    
+
+.Selected{
+        padding: 0 ;
+
+        ul.ScholarsList{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+
+            li{
+                list-style: none;
+                flex-basis: 16%;
+                text-align: center;
+                margin:  2% ;
+             
+
+                cursor: pointer;
+                h2{
+                    font-size: .9rem;
+                    font-weight: 400;
+                    margin: .5rem 0;
+                    line-height: 1rem;
+                }
+                img{
+                    width: 100%;
+                }
+
+                
+
+            }
+        }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Selected{
+        ul.ScholarsList{ 
+            li{ flex-basis: 23%;margin: 2% 1%;}
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .Selected{
+        ul.ScholarsList{ 
+            li{ flex-basis: 27%;
+                margin: 2% 3%;}
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .Selected{
+        ul.ScholarsList{ 
+            li{     flex-basis: 40%;
+                margin: 5%;}
+        }
+    }
+}
